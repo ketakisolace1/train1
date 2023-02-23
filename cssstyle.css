@@ -1,0 +1,21 @@
+
+form {
+    float: center;
+    margin: 150px;
+    background-color: aquamarine;
+    border: 10px;
+    border-style: double;
+}  
+@media screen and (min-width: 1224px) {
+	form {
+		width: 70%;
+	}
+    php
+    {
+        width: 100%;
+    }
+    echo{
+        width: 70%;
+
+    }
+}
