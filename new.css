@@ -1,0 +1,52 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 50%;
+    
+    padding: 10px;
+    margin: auto;
+}
+
+.container h1, p{
+    text-align: center;
+}
+
+input,textarea {
+    font-size: medium;
+    width: 100%;
+    margin: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    outline: none;
+}
+
+form{
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    margin: 13px;
+    padding: 9px;
+    background: blueviolet;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.btn :hover{
+    background-color: aliceblue;
+}
+
+.bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.8;
+}
