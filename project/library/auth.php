@@ -3,27 +3,35 @@
 class Auth{
     public $isloggedIn = false;
     function login($userName, $userPassword){
-    //    $userName, $userPassword;
-       global $conn;
-       $sql ="select * from user where email='".$userName."'and password='".$userPassword."'";
-       echo $sql;
-       //exit;
-      // $result = $conn->query($sql);
-       // if($conn->mysqli_num_rows($result)){
-      //      echo "found the row";
-       // }else{
-          // echo "not found";
-     //   }
+      global $conn;
+      $sql ="SELECT * FROM user WHERE email='$userName' AND password='$userPassword'";
+  
+    $result = $conn->query($sql);
+   //print_r($result);
+   if ($result){
+    $result = mysqli_query($conn, $sql);
+    return $result;
 
-     $result = $conn->query($sql);
-        print_r($result);
-     if ($result)
-     {
-     $rowcount=mysqli_num_rows($result);
-     printf("Result set has %d rows.\n",$rowcount);
-     mysqli_free_result($result);
-     }
-    }
+   }
+   }
+
+   function type($userName, $userPassword){
+      global $conn;
+      $sql="SELECT lable FROM role AS r JOIN user AS u ON r.Id=u.rollId WHERE u.email='$userName' AND u.password='$userPassword'";
+      $result=$conn->query($sql);
+      $row= mysqli_fetch_assoc($result);
+      return $row;
+   }
 }
-
 ?>
+
+
+
+
+
+
+
+
+
+
+   

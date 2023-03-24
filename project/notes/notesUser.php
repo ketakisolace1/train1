@@ -1,29 +1,32 @@
 <?php
 include("../protected/meta.php") ;
 include("../protected/header.php");
-
-
-   if(isset($_GET['id'])){
-    $Id= $_GET['id'];
-    $result1= $note->delete($Id);
-   }
-   if(isset($_GET['updateid'])){
-    $updateid= $_GET['updateid'];
-    $result2= $note->update($Id);
-   }
-    
 ?>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Notice Board</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="../project/index.php">Home page</a>
+       
+      </div>
+    </div>
+  </div>
+</nav>
 <div class="container mt-7">
 <table class="table">
   
   <thead>
     <tr>
-      <th scope="col">#</th>
+     
       <th scope="col">Note Title</th>
       <th scope="col">Note Details</th>
       <th scope="col">Created At</th>
-      <th scope="col">Operation</th>
-      
+      <th scope="col">Created By</th>
     </tr>
   </thead>
   <?php
@@ -36,12 +39,11 @@ include("../protected/header.php");
       <tbody>
         <tr>
         
-        <td><?php echo $row["Id"]; ?></td>
+        
         <td><?php echo $row["noteTitle"]; ?></td>
         <td><?php echo $row["noteDetails"]; ?></td>
         <td><?php echo $row["createdAt"]; ?></td>
-        <td><button class="btn-danger btn" ><a href="edit.php?id=<?php echo $row['Id']; ?>">Delete</a></td>
-        <td><button class="btn-danger btn" ><a href="update.php">Update</a></td>
+        <td><?php echo $row["createdBy"]; ?></td>
         
         </tr>
         </tbody>
@@ -50,6 +52,4 @@ include("../protected/header.php");
       </table>
     </div>
       
-    
-
         

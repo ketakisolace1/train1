@@ -1,6 +1,7 @@
-<?php 
-include("../protected/meta.php") ;
-include("../protected/header.php");
+<?php
+include("./protected/meta.php") ;
+include("./protected/header.php");
+
 
 ?>
 
@@ -9,28 +10,30 @@ include("../protected/header.php");
     <tr class=" table-danger">
         <td> First Name</td>
         <td> Last Name </td>
-        <td> Email ID</td>
-        <td> Created At</td>
+        <td> Apartment Id</td>
+        <!-- <td> Role Id</td> -->
+        <td> Mark as chairperson</td>
        
     </tr>
     <?php
      $result= $main->list();
-    if(!mysqli_num_rows($result)){
+    if(!$result){
        echo "No results found";
    }else{
-    
     while($row = $result-> fetch_array(MYSQLI_ASSOC)){  
           ?>
        
  <tr  class=" table-success">
     <td><?php echo $row["firstName"]; ?></td>
     <td><?php echo $row["lastName"]; ?></td>
-    <td><?php echo $row["email"]; ?></td>
-    <td><?php echo $row["createdAt"]; ?></td> 
-</tr>
+    <td><?php echo $row["a_Id"]; ?></td>
+    
+    <td> <a href="update.php">click to add</a></td>
+  </tr>
+
     
 <?php } }
 ?>
 
 </table>
-    </div>
+</div>
