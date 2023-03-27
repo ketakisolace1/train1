@@ -5,10 +5,10 @@ include("../protected/header.php");
 
 
 if (isset($_POST['submit'])) {
-    $id= $_GET['updateid'];
+    $id= $_GET['upid'];
     $noteTitle= $_POST['noteTitle'];
     $noteDetails= $_POST['noteDetails'];
-    $result=$note->update($noteTitle,$noteDetails,$id); 
+    $result=$chair->updatenote($noteTitle,$noteDetails,$id); 
 
 }
    

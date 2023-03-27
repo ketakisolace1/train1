@@ -6,6 +6,7 @@ include("../protected/header.php");
 <div class="container m-5">
 <table class="table table-striped table-bordered border-dark table-hover">
     <tr class=" table-success">
+        <td> Apt Id</td>
         <td> Apartment Name</td>
         <td> Address </td>
         <td> City</td>
@@ -22,6 +23,7 @@ include("../protected/header.php");
           ?>
        
  <tr  class=" table-warning">
+    <td><?php echo $row["a_Id"]; ?></td>
     <td><?php echo $row["aptName"]; ?></td>
     <td><?php echo $row["aptAddress"]; ?></td>
     <td><?php echo $row["city"]; ?></td>

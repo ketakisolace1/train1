@@ -56,10 +56,10 @@ class User{
     $result5= $conn->query($sql5);
     
   }
-  function chairperson($value){
+  function chairperson($id){
     global $conn;
     
-    $sql="UPDATE user SET rollId= 2 WHERE email='$value' ";
+    $sql="UPDATE user SET rollId= 2 WHERE id=$id";
     $result= $conn->query($sql);
   }
 }

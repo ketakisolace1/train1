@@ -22,8 +22,9 @@ include("./protected/header.php");
    <div><a href="./user/add.php">Add Users</div>
    <div><a href="./user/edit.php">Edit Profile</a>
    <div><a href="./Apartment/list.php">Get all Apartments</a></div>
+   <div><a href="./Apartment/edit.php">Update Apartment</a></div>
    <div><a href="./notes/index.php">Notifications</a></div>
-   <div><a href="newch.php">New Chairperson</a></div>
+   <!--<div><a href="newch.php">New Chairperson</a></div>-->
    <div><a href=" logout.php">Logout</a></div>
   
 </div>

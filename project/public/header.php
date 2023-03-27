@@ -9,7 +9,7 @@ include("./includes/config.php") ;
 ?>
 
 
-<nav class="navbar  ">
+<nav class="navbar fixed-top ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="./html/h1.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Profile

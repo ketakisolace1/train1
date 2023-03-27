@@ -2,16 +2,11 @@
 include("../protected/meta.php") ;
 include("../protected/header.php");
 
-
-   if(isset($_GET['id'])){
+if(isset($_GET['id'])){
     $Id= $_GET['id'];
     $result1= $note->delete($Id);
-   }
-   if(isset($_GET['updateid'])){
-    $updateid= $_GET['updateid'];
-    $result2= $note->update($Id);
-   }
-    
+  }
+   
 ?>
 <div class="container mt-7">
 <table class="table">
@@ -41,7 +36,7 @@ include("../protected/header.php");
         <td><?php echo $row["noteDetails"]; ?></td>
         <td><?php echo $row["createdAt"]; ?></td>
         <td><button class="btn-danger btn" ><a href="edit.php?id=<?php echo $row['Id']; ?>">Delete</a></td>
-        <td><button class="btn-danger btn" ><a href="update.php">Update</a></td>
+        <td><button class="btn-success btn" ><a href="update.php?updateid=<?php echo $row['Id']; ?>">Update</a></td>
         
         </tr>
         </tbody>

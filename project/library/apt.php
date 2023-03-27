@@ -16,20 +16,20 @@ class Apt{
         return $result;
     }
     
-    function editApt($aptName,$aptAddress,$city,$state,$country){
+    function update($aptName,$aptAddress,$city,$state,$country,$a_Id){
         global $conn;
-    
-        if(isset($_SESSION['email'])){
-    
-          $emailNew=$_SESSION['email'];
-          
-        } else{
-          die("Error fetching Data");
-        }
         
-        $sql="UPDATE apt SET aptName='$aptName',aptAddress='$aptAddress',city= '$city',state='$state',country='$country' WHERE email='$emailNew'";
+        $sql="UPDATE appt SET aptName='$aptName',aptAddress='$aptAddress',city= '$city',state='$state',country='$country' WHERE a_Id= $a_Id";
       
         $result= $conn->query($sql);
+    }
+    
+    function delete($a_Id){ 
+        global $conn;
+        $sql="DELETE FROM appt WHERE a_Id='".$a_Id."'";
+        $result= $conn->query($sql);
+        
+        return $result;
     }
 }
 ?>

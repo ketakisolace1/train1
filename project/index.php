@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     if(($row['lable']=="Admin")){
       header("location:dash.php");
     }elseif(($row['lable']=="Chairperson")){
-      header("location:member.php");
+      header("location:chairdash.php");
     }else{
       header("location:userdash.php");
     }} else {
@@ -65,9 +65,5 @@ if (isset($_POST['submit'])) {
    </div>
 </div>  
 </div>
-<?php
- 
-include("./public/footer.php");
 
-?>
 </div>

@@ -22,15 +22,10 @@ class note{
         return $result;
     }
 
-    function update($noteTitle,$noteDetails){ 
+    function update($noteTitle,$noteDetails,$id){ 
         global $conn;
-        if(isset($_SESSION['email'])){
-            $emailNew=$_SESSION['email'];
-            
-          } else{
-            die("Error fetching Data");
-          }
-        $sql="UPDATE note SET noteTitle='$noteTitle',noteDetails='$noteDetails'";
+        
+        $sql="UPDATE note SET noteTitle='$noteTitle',noteDetails='$noteDetails' where Id=$id";
         $result= $conn->query($sql);
         
         return $result;

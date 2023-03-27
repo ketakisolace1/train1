@@ -26,7 +26,7 @@ include("../protected/header.php");
       <th scope="col">Note Title</th>
       <th scope="col">Note Details</th>
       <th scope="col">Created At</th>
-      <th scope="col">Created By</th>
+      <!--<th scope="col">Created By</th>-->
     </tr>
   </thead>
   <?php
@@ -43,7 +43,7 @@ include("../protected/header.php");
         <td><?php echo $row["noteTitle"]; ?></td>
         <td><?php echo $row["noteDetails"]; ?></td>
         <td><?php echo $row["createdAt"]; ?></td>
-        <td><?php echo $row["createdBy"]; ?></td>
+      
         
         </tr>
         </tbody>
